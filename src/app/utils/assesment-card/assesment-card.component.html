@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-body">
+        <div class="card-img">
+            <div class="icon-block" style="background-color: #EBE8FD;">
+                <img src="/assets/images/bag.png">
+            </div>
+
+            <img src="/assets/images/3 dot.png">
+        </div>
+
+        <div class="card-title">
+            <h3 class="heading3">{{title}}</h3>
+            <h4 class="card-subtitle">
+                <label class="type">{{type}}</label>
+                <label class="date">
+                    <img src="/assets/images/calendar_today.png">
+                    <span>{{date}}</span>
+                </label>
+            </h4>
+        </div>
+
+        <div class="card-text">
+            <div class="col">
+                <div class="duration">
+                    <label>{{duration}}</label>
+                    <span>Duration</span>
+                </div>
+                <div class="question">
+                    <label>{{question}}</label>
+                    <span>Questions</span>
+                </div>
+            </div>
+            <div class="col align-items-center justify-content-end" [ngStyle]="{'margin-right': rightMargin(acnt)}">
+                <button class="btn py-0">
+                    <img src="/assets/images/link_diagonal.png">
+                    <label>Share</label>
+                </button>
+
+                <ng-container *ngFor="let item of createRange();let i=index">
+                    <div class="logged-acnt"
+                        [ngStyle]="{'background-color':randomColorGenerator(),'z-index':zIndex(i+1),'transform':tranformFormula(i),'right':rightMargin(i,5)}">
+                        LP</div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

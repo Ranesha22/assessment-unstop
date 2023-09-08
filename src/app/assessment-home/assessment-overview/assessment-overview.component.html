@@ -1,0 +1,129 @@
+<div class=" navbar-collapse vh-100" id="collapsibleNavbar">
+    <app-menu></app-menu>
+</div>
+
+<div class="container p-0">
+    <div class="row title-row">
+        <div class="col-12 col-heading heading">
+            <button class="navbar-toggler d-md-none" type="button" (click)="openMenu()">
+                <img src="/assets/images/segment.png">
+            </button>
+            <h1 class="heading1 d-inline-block">Assessment</h1>
+        </div>
+        <div id="myAssessment" class="col heading">
+            <h3 class="heading2 active">My Assessment</h3>
+        </div>
+        <div id="unstopAssessment" class="col d-md-none">
+            <h3 class="heading2">Unstop Assessment</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col heading d-none d-md-block">
+            <h3 class="heading3">Assessments Overview</h3>
+        </div>
+    </div>
+
+    <div class="col-12 collapse d-md-block" id="totalAssessments">
+        <div class="row jumbotron p-0 m-0">
+            <div class="col col-lg-auto total-assessment">
+                <label class="overview-label">Total Assessment</label>
+                <div class="stats-wrapper">
+                    <div class="icon-block view-agenda">
+                        <img src="/assets/images/view_agenda.png">
+                    </div>
+
+                    <label class="display-2">34</label>
+                </div>
+            </div>
+            <div class="col col-lg-auto order-lg-last total-purpose">
+                <label class="overview-label">Total Purpose</label>
+                <div class="stats-wrapper">
+                    <div class="icon-block link-img">
+                        <img src="/assets/images/link.png">
+                    </div>
+
+                    <label class="display-2">11</label>
+                </div>
+            </div>
+            <div class="col-12 col-lg-auto candidates">
+                <label class="overview-label">Candidates</label>
+                <div class="stats-wrapper">
+                    <div class="icon-block group" style="margin-right: 20px;">
+                        <img src="/assets/images/group.png">
+                    </div>
+
+                    <div class="num-wrapper pe-4">
+                        <label class="display-2">11,145 <small class="small">+89</small></label>
+                        <label>Total Candidate</label>
+                    </div>
+
+
+                    <div class="num-wrapper ps-4">
+                        <label class="display-2">1,14 <small class="small">+89</small></label>
+                        <label>Who Attamped</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-auto candidates-source">
+                <label class="overview-label">Candidates Source</label>
+                <div class="stats-wrapper">
+                    <div class="icon-block captive-portal" style="margin-right: 20px;">
+                        <img src="/assets/images/captive_portal.png">
+                    </div>
+
+                    <div class="num-wrapper pe-4">
+                        <label class="display-2">11,000 <small class="small">+89</small></label>
+                        <label>E-mail</label>
+                    </div>
+
+
+                    <div class="num-wrapper px-4">
+                        <label class="display-2">145 <small class="small">+89</small></label>
+                        <label>Social Share</label>
+                    </div>
+
+                    <div class="num-wrapper ps-4">
+                        <label class="display-2">145 <small class="small">+89</small></label>
+                        <label>Unique Link</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class="col p-0">
+            <h3 class="heading3" style="padding-top:40px">My Assessment</h3>
+        </div>
+        <div class="col p-0 d-flex d-md-none align-items-end justify-content-end">
+            <button class="btn mobile-btn">
+                <img src="/assets/images/search.png">
+            </button>
+            <button class="btn mobile-btn">
+                <img src="/assets/images/filter_list_alt.png">
+            </button>
+            <button class="btn mobile-btn histogram collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#totalAssessments" aria-expanded="false" aria-controls="totalAssessments">
+                <img src="/assets/images/histogram.svg">
+            </button>
+        </div>
+
+    </div>
+
+    <div class="cards-container vw-100">
+        <div class="row g-3 g-lg-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <app-new-assessment-card></app-new-assessment-card>
+            </div>
+            <ng-container *ngFor="let assessment of assesments">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <app-assesment-card [title]="assessment.assesment_name" [type]="assessment.assesment_type"
+                        [date]="assessment.assesment_date" [duration]="assessment.assesment_duration"
+                        [question]="assessment.assesment_question" [acnt]='assessment.log_acnt'></app-assesment-card>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

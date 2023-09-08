@@ -1,0 +1,20 @@
+
+.card-img { display: flex; justify-content: space-between; align-items: flex-start; } 
+
+.card-title { color: #1C4980; padding-top:10px; padding-bottom: 18px; border-bottom: 1px dashed #DADCE0; } 
+
+.type { padding-right: 10px; margin-right: 10px; border-right: 1px solid #DADCE0; } 
+.date > img { margin-right: 5px; } 
+.date > span { color: #8DA4BF; } 
+.card-text { padding-top:15px; display: flex; justify-content: space-between; color:#1C4980} 
+.card-text .col {display: inherit;}
+
+.type , .duration > label , .question > label { font-size: 14px; font-weight: 600; } 
+.date>span, .duration > span , .question>span { font-size: 12px; font-weight: 500; } 
+.duration > span , .question>span {display: block;}
+.duration {margin-right: 15px;}
+
+.btn {border-radius: 50px;border: 1px solid #1C4980;font-size: 14px;font-weight: 500;color: #1C4980;height: 30px;align-self: center;min-width: fit-content;}
+.logged-acnt {height: 30px;width: 34px;border-radius: 50%;font-size: 14px;font-weight: 700;color: #fff;text-align: center;border: 1px solid #fff;padding-top: 3px;position: absolute;}
+
+

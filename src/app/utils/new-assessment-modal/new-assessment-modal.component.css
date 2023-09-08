@@ -1,0 +1,40 @@
+.modal-content { border-radius: 8px; border: 1px solid #DADCE0; } 
+.modal-header ,.modal-body ,.modal-footer { padding:20px 30px } 
+.modal-title { font-size: 20px; font-weight: 600; } 
+
+.btn-close { opacity: 1; } 
+
+.input-wrapper { margin-bottom: 20px; } 
+.input-wrapper .form-label { font-size: 16px; font-weight: 500; margin-bottom: 10px; } 
+.input-wrapper > .form-control , .input-wrapper >.form-select { padding: 15px; font-size: 14px; color: #1C4980; font-weight:500; border-radius: 8px; border: 1px solid #DADCE0; } 
+::placeholder , option { color: #1C4980; font-weight: 500; } 
+
+.skill-wrapper { border-radius: 8px; border: 1px solid #DADCE0; } 
+.skill-wrapper > * { padding: 15px; border: none; } 
+.skill-wrapper > :first-child { border-bottom: 1px solid #DADCE0; display: flex; flex-wrap: wrap; padding-bottom: 5px; } 
+.skill-wrapper .form-control { font-size: 14px; color: #1C4980; font-weight:500; } 
+
+.save-btn { margin: 0; padding:10px 0; font-size: 14px; font-weight: 600; } 
+
+.skill { height: 30px; border-radius: 22px; background-color: #DDEDFF; padding:8px 10px 8px 12px; margin-right: 10px; display: flex; width: fit-content; align-items: center; margin-bottom: 10px; } 
+.skill>img { cursor: pointer; } 
+.skill-label { font-size: 12px; font-weight: 500; margin-right: 5px; } 
+
+.animate-bottom { position: relative; animation: animatebottom 0.4s; } 
+.animate-top { position: relative; animation: animatetop 0.5s; } 
+ 
+@keyframes animatetop { 
+ from { bottom: 0; opacity: 1; } 
+
+ to { bottom: -300px; opacity: 0; } 
+ }
+
+ @keyframes animatebottom { 
+ from { bottom: -300px; opacity: 0; } 
+ 
+ to { bottom: 0; opacity: 1; } 
+ }
+
+@media screen and (min-width:768px){
+ .modal-dialog { min-width:600px } 
+ }
