@@ -1,7 +1,7 @@
-
+.upper-section {border-bottom: 1px dashed #DADCE0;}
 .card-img { display: flex; justify-content: space-between; align-items: flex-start; } 
 
-.card-title { color: #1C4980; padding-top:10px; padding-bottom: 18px; border-bottom: 1px dashed #DADCE0; } 
+.card-title { color: #1C4980; padding-top:10px; padding-bottom: 18px;  } 
 
 .type { padding-right: 10px; margin-right: 10px; border-right: 1px solid #DADCE0; } 
 .date > img { margin-right: 5px; } 
@@ -15,6 +15,14 @@
 .duration {margin-right: 15px;}
 
 .btn {border-radius: 50px;border: 1px solid #1C4980;font-size: 14px;font-weight: 500;color: #1C4980;height: 30px;align-self: center;min-width: fit-content;}
-.logged-acnt {height: 30px;width: 34px;border-radius: 50%;font-size: 14px;font-weight: 700;color: #fff;text-align: center;border: 1px solid #fff;padding-top: 3px;position: absolute;}
+.logged-acnt {height: 30px;min-width: 34px;border-radius: 50%;font-size: 14px;font-weight: 700;color: #fff;text-align: center;border: 1px solid #fff;padding-top: 3px;}
+.logged-acnt:nth-of-type(1) {transform: translateX(5px);z-index: 3;}
+.logged-acnt:nth-of-type(2) {transform: translateX(22px);z-index: 2;}
+.logged-acnt:nth-of-type(3) {transform: translateX(40px);z-index: 1;}
+.logged-acnt-label {font-size: 12px;font-weight: 600;align-self: center;margin-left:10px}
 
-
+@media screen and (max-width:767px){
+    .duration {margin-right: 10px;}
+    .card-title {padding: 0;flex-grow: 2;margin-bottom: 10px;}
+    .card-text {padding-top: 10px;}
+}

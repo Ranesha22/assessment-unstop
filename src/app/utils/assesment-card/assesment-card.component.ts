@@ -22,7 +22,9 @@ export class AssesmentCardComponent implements OnInit {
   // Create an array for number of accounts 
   createRange(){
     this.items = [];
-    for(let i = 1; i <= this.acnt; i++){
+    let logged_acnt = this.acnt ;
+    if (this.acnt > 3 ) logged_acnt = 3;
+    for(let i = 1; i <= logged_acnt; i++){
        this.items.push(i);
     }
     return this.items;
@@ -36,15 +38,13 @@ export class AssesmentCardComponent implements OnInit {
 
   //Formula to overlap accounts 
   tranformFormula(i){
-    let translate = (i+1) *-10;
+    let translate = i;
     return `translateX(${translate}px)`
   }
 
  //Add necessary right margin to button
-  rightMargin(i,multiplier?) {
-    if(multiplier)
-    return `${(i)* multiplier}px`;
-    return `${ ((i+1) *20) - (i*5) }px`
+  rightMargin(i) {
+    return `${ i * 15 }px`
   }
 
   // Return z-index for overlapping accounts

@@ -1,5 +1,5 @@
 #main-row div {background-color: #fff;padding: 0;}
-#assessment {overflow: auto;height: 100vh;padding-bottom: 20px!important;}
+#assessment {overflow: auto;height: 100dvh;}
 
 @media screen and (min-width: 768px) {
     #menu {width:140px}

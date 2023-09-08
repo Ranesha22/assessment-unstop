@@ -1,14 +1,26 @@
 <div class="card">
     <div class="card-body">
+        <div class="upper-section">
         <div class="card-img">
             <div class="icon-block" style="background-color: #EBE8FD;">
                 <img src="/assets/images/bag.png">
             </div>
 
+            <div class="card-title d-block d-md-none">
+                <h3 class="heading3">{{title}}</h3>
+                <h4 class="card-subtitle">
+                    <label class="type">{{type}}</label>
+                    <label class="date">
+                        <img src="/assets/images/calendar_today.png">
+                        <span>{{date}}</span>
+                    </label>
+                </h4>
+            </div>
+
             <img src="/assets/images/3 dot.png">
         </div>
 
-        <div class="card-title">
+        <div class="card-title d-none d-md-block">
             <h3 class="heading3">{{title}}</h3>
             <h4 class="card-subtitle">
                 <label class="type">{{type}}</label>
@@ -18,6 +30,7 @@
                 </label>
             </h4>
         </div>
+    </div>
 
         <div class="card-text">
             <div class="col">
@@ -30,17 +43,20 @@
                     <span>Questions</span>
                 </div>
             </div>
-            <div class="col align-items-center justify-content-end" [ngStyle]="{'margin-right': rightMargin(acnt)}">
-                <button class="btn py-0">
+            <div class="col align-items-center justify-content-end" style="flex-grow: 2;">
+                <button class="btn py-0" [ngStyle]="{'margin-right':acnt >=3 ? '-30px':'0'}">
                     <img src="/assets/images/link_diagonal.png">
                     <label>Share</label>
                 </button>
 
-                <ng-container *ngFor="let item of createRange();let i=index">
-                    <div class="logged-acnt"
-                        [ngStyle]="{'background-color':randomColorGenerator(),'z-index':zIndex(i+1),'transform':tranformFormula(i),'right':rightMargin(i,5)}">
-                        LP</div>
-                </ng-container>
+                <div class="d-flex justify-content-end">
+                <div style="display: flex;width: 20%; flex-direction: row-reverse;">
+                    <div *ngFor="let item of createRange();let i=index" class="logged-acnt"
+                        [ngStyle]="{'background-color':randomColorGenerator()}">
+                        LP</div>  
+                </div>
+                <label *ngIf="acnt>3" class="logged-acnt-label">+{{acnt-3}}</label>
+            </div>
             </div>
         </div>
     </div>
